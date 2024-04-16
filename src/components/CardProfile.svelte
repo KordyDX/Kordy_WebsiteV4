@@ -59,22 +59,13 @@
                     >
                 </div>
             </div>
-            <div class="flex flex-row gap-5">
-                <a
-                    target="_blank"
-                    href="https://www.instagram.com/kristian_kordy/"
-                    ><img src="/instagram.svg" alt="" /></a
-                >
-                <a
-                    target="_blank"
-                    href="https://discordapp.com/users/399983880548909057"
-                    ><img src="/discord.svg" alt="" /></a
-                >
-                <a target="_blank" href="https://twitter.com/KristianNeAsi"
-                    ><img src="/x.svg" alt="" /></a
-                >
+            <div class="flex flex-row gap-5 place-content-center place-items-center">
+                <a target="_blank" href="https://www.instagram.com/kristian_kordy/"><img src="/instagram.svg" alt="" /></a>
+                <a target="_blank" href="https://discordapp.com/users/399983880548909057"><img src="/discord.svg" alt="" /></a>
+                <a target="_blank" href="https://twitter.com/KristianNeAsi"><img src="/x.svg" alt="" /></a>
+                <ToggleMode/>
+
             </div>
-            <ToggleMode/>
         </div>
     </div>
 </div>
