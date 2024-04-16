@@ -3,16 +3,26 @@
   import CardSection from "./components/CardSection.svelte";
 
   function updateTheme() {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    const theme = localStorage.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.classList.remove('dark', 'light');
+    document.documentElement.classList.add(theme);
   }
+
   updateTheme();
 </script>
 
-<div class="flex flex-row">
-  <CardProfile/>
-  <CardSection/>
-</div>
+<body class="bg-background">
+  <div class="flex flex-row place-content-center">
+    <CardProfile/>
+    <CardSection/>
+  </div>
+</body>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+  
+  :global(body) {
+    font-family: "Tilt Neon", sans-serif;
+    transition: all 0.3s;
+  }
+</style>
